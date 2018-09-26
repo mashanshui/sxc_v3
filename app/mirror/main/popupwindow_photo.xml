@@ -1,0 +1,16 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171585 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/popupwindow_photo">
+        <!-- TextView Examples:
+        <pop_camera_text text="@string/string_resource" />
+        <pop_camera_text text="Text literal" textSize="14sp" /> -->
+        <pop_camera_text />
+        <pop_album_text />
+        <pop_cancel_text />
+    </_content>
+</screen>

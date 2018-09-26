@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">随心车</string>
+    <string name="question_mask">？</string>
+    <string name="toast_network_error">网络连接失败,请检查网络</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="consider">再看看</string>
+    <string name="modify">修改</string>
+    <string name="save">保存</string>
+    <string name="set">去设置</string>
+    <string name="refuse">拒绝</string>
+    <string name="level_grow">如何升级</string>
+    <!--时间选择-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <!--XListView-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_success">刷新成功</string>
+    <string name="xlistview_header_hint_failt">刷新失败</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+    <string name="btn_inday">天天租</string>
+    <string name="luxury_inday">豪车租</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <string name="touch_to_exit">再按一次退出应用</string>
+    <string name="point">.</string>
+
+
+    <string name="initerror">服务器太忙了！请稍后再试</string>
+    <string name="updateinfo">"发现新版本，请升级后再使用。"</string>
+    <string name="updateing">"正在下载升级安装包，请稍候。"</string>
+    <string name="updatefail">"下载升级安装包失败，您的网络不太给力哦。"</string>
+    <string name="recover_order">恢复订单</string>
+    <string name="recommit">重新提交</string>
+    <string name="contact_service">联系客服</string>
+    <string name="close">关闭评价</string>
+
+</resources>

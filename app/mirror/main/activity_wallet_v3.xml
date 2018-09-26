@@ -1,0 +1,45 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171951 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_wallet_v3">
+        <!-- ImageView Examples:
+        <balance_iv src="@drawable/image_resource" />
+        <balance_iv src="relative_path/image.jpg" /> -->
+        <balance_iv />
+        <!-- TextView Examples:
+        <tv01 text="@string/string_resource" />
+        <tv01 text="Text literal" textSize="14sp" /> -->
+        <tv01 />
+        <iv01 />
+        <balance_tv />
+        <share_deposit_iv />
+        <tv02 />
+        <iv02 />
+        <share_deposit_tv />
+        <integral_shop_iv />
+        <integral_shop_tv />
+        <about_integral_tv />
+        <iv04 />
+        <integral_tv />
+        <coupon_iv />
+        <tv05 />
+        <iv05 />
+        <coupon_tv />
+        <useful_coupon_iv />
+        <tv06 />
+        <iv06 />
+        <useful_coupon_tv />
+        <invalid_coupon_iv />
+        <tv07 />
+        <iv07 />
+        <invalid_coupon_tv />
+        <lease_deposit_iv />
+        <tv08 />
+        <iv08 />
+        <lease_deposit_tv />
+    </_content>
+</screen>

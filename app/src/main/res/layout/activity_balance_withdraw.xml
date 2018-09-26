@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/red_top_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#f0f0f0"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:text="提现资料填写"
+        android:textColor="#969696"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/phone_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:digits="0123456789"
+        android:hint="请输入您的手机号"
+        android:inputType="phone"
+        android:paddingLeft="12dp"
+        android:textColor="@color/darkBlack"
+        android:textColorHint="#b4b4b4"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/lightGray" />
+
+    <EditText
+        android:id="@+id/user_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:hint="请输入您的用户名"
+        android:inputType="text"
+        android:paddingLeft="12dp"
+        android:textColor="@color/darkBlack"
+        android:textColorHint="#b4b4b4"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/lightGray" />
+
+    <EditText
+        android:id="@+id/card_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:digits="0123456789"
+        android:hint="请输入您的银行卡号"
+        android:inputType="phone"
+        android:paddingLeft="12dp"
+        android:textColor="@color/darkBlack"
+        android:textColorHint="#b4b4b4"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/lightGray" />
+
+    <EditText
+        android:id="@+id/address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:hint="请输入您的开户行地址"
+        android:paddingLeft="12dp"
+        android:textColor="@color/darkBlack"
+        android:textColorHint="#b4b4b4"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/lightGray" />
+
+    <EditText
+        android:id="@+id/count_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:digits="0123456789"
+        android:hint="请输入您的提现金额"
+        android:inputType="phone"
+        android:paddingLeft="12dp"
+        android:textColor="@color/darkBlack"
+        android:textColorHint="#b4b4b4"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/lightGray" />
+
+    <Button
+        android:id="@+id/withdraw_btn"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_btn_click_bg_red"
+        android:gravity="center"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/remind_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="*提现收取10%的手续费"
+        android:textColor="@color/orRed"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171594 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_upload_credit_report_v3">
+        <!-- ImageView Examples:
+        <one_iv src="@drawable/image_resource" />
+        <one_iv src="relative_path/image.jpg" /> -->
+        <one_iv />
+        <take_photo_iv01 />
+        <two_iv />
+        <take_photo_iv02 />
+        <three_iv />
+        <take_photo_iv03 />
+        <four_iv />
+        <take_photo_iv04 />
+    </_content>
+</screen>

@@ -1,0 +1,17 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171917 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_share">
+        <!-- ImageView Examples:
+        <zoom_out_iv src="@drawable/image_resource" />
+        <zoom_out_iv src="relative_path/image.jpg" /> -->
+        <zoom_out_iv />
+        <zoom_in_iv />
+        <service_iv />
+        <lopoi_iv />
+    </_content>
+</screen>

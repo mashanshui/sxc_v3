@@ -1,0 +1,37 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603172054 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_luxuryorderdetail">
+        <!-- ImageView Examples:
+        <car_iv src="@drawable/image_resource" />
+        <car_iv src="relative_path/image.jpg" /> -->
+        <car_iv />
+        <!-- TextView Examples:
+        <car_name_tv text="@string/string_resource" />
+        <car_name_tv text="Text literal" textSize="14sp" /> -->
+        <car_name_tv />
+        <car_info_tv />
+        <appoint_date_tv />
+        <appoint_time_tv />
+        <share_in_day_type_tv />
+        <cost_info_tv />
+        <tv_lo01 />
+        <lease_lo_tv />
+        <tv_lo02 />
+        <g_lo_tv />
+        <linc01 />
+        <license_num_tv />
+        <exception_tv />
+        <deduction_tv01 />
+        <deduction_tv />
+        <check_iv />
+        <discount_tv />
+        <add_time_tv />
+        <add_cost_tv />
+        <total_cost_tv />
+    </_content>
+</screen>

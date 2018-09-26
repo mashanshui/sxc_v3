@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/red_top_bar" />
+
+    <com.sxcapp.www.CustomerView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="请上传合同" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lightGray2" />
+
+            <TextView
+                android:id="@+id/constract_num_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="合同编码()" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_re01"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic01"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re02"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re01">
+
+                    <ImageView
+                        android:id="@+id/add_pic02"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv02"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_re02"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/add_re03"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic03"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv03"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re04"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re03">
+
+                    <ImageView
+                        android:id="@+id/add_pic04"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv04"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_re03"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/add_re05"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic05"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv05"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re06"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re05">
+
+                    <ImageView
+                        android:id="@+id/add_pic06"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv06"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_re04"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/add_re07"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic07"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv07"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re08"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re07">
+
+                    <ImageView
+                        android:id="@+id/add_pic08"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv08"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/commit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selector_btn_click_bg_luxury"
+                android:text="提交照片"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+    </com.sxcapp.www.CustomerView.BounceScrollView>
+</LinearLayout>
+

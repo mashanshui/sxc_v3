@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/red_top_bar" />
+
+    <com.sxcapp.www.CustomerView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.sxcapp.www.CustomerView.CustomViewPager
+                android:id="@+id/car_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.sxcapp.www.CustomerView.CustomViewPager>
+
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:piv_animationType="slide"
+                app:piv_dynamicCount="true"
+                app:piv_interactiveAnimation="true"
+                app:piv_selectedColor="@color/green"
+                app:piv_unselectedColor="@color/lightGray2"
+                app:piv_viewPager="@id/car_vp"
+                attrs:piv_padding="8dp"
+                 />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_white"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/fetch_store_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_view_click_white_gray">
+
+                    <ImageView
+                        android:id="@+id/fetch_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:background="@mipmap/fetch_icon_dia_v3" />
+
+                    <TextView
+                        android:id="@+id/fetch_store_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/fetch_iv"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightGray2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/select_g_store_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_view_click_white_gray">
+
+                    <ImageView
+                        android:id="@+id/g_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:background="@mipmap/g_icon_dia_v3" />
+
+                    <TextView
+                        android:id="@+id/g_store_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/g_iv"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+
+                <com.sxcapp.www.CustomerView.DynamicHeightViewPager
+                    android:id="@+id/rules_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f9f9f9"></com.sxcapp.www.CustomerView.DynamicHeightViewPager>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="#f9f9f9" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_deductible_re"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/selector_view_click_white_gray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="不计免赔"
+                    android:textColor="@color/black_tv_87"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/no_deductible_cost_tv"
+                    android:text="￥"
+                    android:textColor="@color/green"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/no_deductible_cost_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/check_iv"
+                    android:textColor="@color/green"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/check_iv"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/green_checkbox_checked_v3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/appoint_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/selector_btn_click_bg_green"
+                android:gravity="center"
+                android:text="预约开始"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </com.sxcapp.www.CustomerView.BounceScrollView>
+
+</LinearLayout>

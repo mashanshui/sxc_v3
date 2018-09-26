@@ -1,0 +1,31 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603172072 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_shareindaydetail">
+        <!-- TextView Examples:
+        <share_in_day_type_tv text="@string/string_resource" />
+        <share_in_day_type_tv text="Text literal" textSize="14sp" /> -->
+        <share_in_day_type_tv />
+        <cost_info_tv />
+        <tv_lo01 />
+        <lease_lo_tv />
+        <tv_lo02 />
+        <g_lo_tv />
+        <linc01 />
+        <license_num_tv />
+        <!-- ImageView Examples:
+        <battery_iv src="@drawable/image_resource" />
+        <battery_iv src="relative_path/image.jpg" /> -->
+        <battery_iv />
+        <oil_tv />
+        <endurance_tv />
+        <find_car_tv />
+        <deduction_tv01 />
+        <deduction_tv />
+        <check_iv />
+    </_content>
+</screen>

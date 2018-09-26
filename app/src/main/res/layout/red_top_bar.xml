@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_red">
+
+        <View
+            android:id="@+id/statusBarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/top_bar_red"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/statusBarView">
+
+
+            <TextView
+                android:id="@+id/topbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/topbar_leftbtn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:drawableLeft="@null"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical|left"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/share_in_day_btn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/topbar_leftbtn"
+                android:background="@null"
+                android:drawableLeft="@null"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical|left"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/topbar_rightbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@null"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/topbar_deletebtn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/topbar_rightbtn"
+                android:background="@null"
+                android:drawableLeft="@null"
+                android:drawablePadding="5dp"
+                android:text=""
+
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

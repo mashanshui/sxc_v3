@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/nomorl_top_bar" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="36dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/all_re"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/all_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="全部"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#787878"-->
+    <!--android:textSize="15dp" />-->
+    <!--<View-->
+    <!--android:id="@+id/view_all"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/orRed"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/sports_car_re"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/sports_car_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="跑车"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#787878"-->
+    <!--android:textSize="15dp" />-->
+    <!--<View-->
+    <!--android:id="@+id/view_sports_car_re"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/orRed"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/mpv_re"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/mpv_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="MPV"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#787878"-->
+    <!--android:textSize="15dp" />-->
+    <!--<View-->
+    <!--android:id="@+id/view_mpv"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/orRed"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/saloon_re"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/saloon_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="轿车"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#787878"-->
+    <!--android:textSize="15dp" />-->
+    <!--<View-->
+    <!--android:id="@+id/view_saloon"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/orRed"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/suv_re"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/suv_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="SUV"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#787878"-->
+    <!--android:textSize="15dp" />-->
+    <!--<View-->
+    <!--android:id="@+id/view_suv"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/orRed"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/bar">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            app:tabIndicatorColor="@color/orRed"
+            app:tabSelectedTextColor="@color/orRed"
+            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+            app:tabTextColor="#787878" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/car_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/re"></android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>

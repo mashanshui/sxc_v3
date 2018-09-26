@@ -1,0 +1,34 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171935 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_oil_inday_exist_v3">
+        <!-- ImageView Examples:
+        <car_iv src="@drawable/image_resource" />
+        <car_iv src="relative_path/image.jpg" /> -->
+        <car_iv />
+        <!-- TextView Examples:
+        <license_num_tv text="@string/string_resource" />
+        <license_num_tv text="Text literal" textSize="14sp" /> -->
+        <license_num_tv />
+        <car_color_iv />
+        <car_name_tv />
+        <car_info_tv />
+        <oil_tv />
+        <oil_mass_tv />
+        <fetch_iv />
+        <fetch_store_name_tv />
+        <g_iv />
+        <g_store_name_tv />
+        <rent_iv />
+        <rent_day_type_tv />
+        <rent_day_cost_tv />
+        <coupon_icon_iv />
+        <coupon_size_tv />
+        <no_deductible_cost_tv />
+        <check_iv />
+    </_content>
+</screen>

@@ -1,0 +1,45 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171904 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_oldcar_detail">
+        <!-- ImageView Examples:
+        <back_iv src="@drawable/image_resource" />
+        <back_iv src="relative_path/image.jpg" /> -->
+        <back_iv />
+        <!-- TextView Examples:
+        <car_number text="@string/string_resource" />
+        <car_number text="Text literal" textSize="14sp" /> -->
+        <car_number />
+        <image_index_tv />
+        <image_count_tv />
+        <car_name_tv />
+        <price_tv />
+        <new_car_price_tv />
+        <split_iv01 />
+        <servicefee_tv />
+        <mileage_tv />
+        <emission_standard_tv />
+        <licensing_time />
+        <displacement_tv />
+        <oper_time_tv />
+        <oper_city_tv />
+        <more_config_tv />
+        <owner_iv />
+        <owner_name_tv />
+        <owner_dict_name_tv />
+        <look_car_tv />
+        <instruction_tv />
+        <annual_inspection_end_time_tv />
+        <tcl_end_time_tv />
+        <vcl_end_time_tv />
+        <transfer_count_tv />
+        <auth_iv />
+        <appearance_iv />
+        <trim_iv />
+        <engine_tv />
+    </_content>
+</screen>

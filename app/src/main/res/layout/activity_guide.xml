@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="1000"
+        android:inAnimation="@anim/push_left_in"
+        android:outAnimation="@anim/push_left_out"
+        android:persistentDrawingCache="animation">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c46eac"
+            android:src="@mipmap/guide_one"
+            android:tag="1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6ec486"
+            android:src="@mipmap/guide_two"
+            android:tag="2" />
+
+        <ImageView
+            android:id="@+id/guide_iv03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c4b16f"
+            android:src="@mipmap/guide_three"
+            android:tag="3" />
+
+
+    </ViewFlipper>
+
+</LinearLayout>

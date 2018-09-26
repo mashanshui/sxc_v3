@@ -1,0 +1,43 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171897 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_main_v3">
+        <!-- ImageView Examples:
+        <remind_car_iv src="@drawable/image_resource" />
+        <remind_car_iv src="relative_path/image.jpg" /> -->
+        <remind_car_iv />
+        <!-- TextView Examples:
+        <remind_tv text="@string/string_resource" />
+        <remind_tv text="Text literal" textSize="14sp" /> -->
+        <remind_tv />
+        <avatar_iv />
+        <user_name_tv />
+        <authentication_iv />
+        <authentication_tv />
+        <credit_authentication_iv />
+        <credit_authentication_tv />
+        <tv01 />
+        <member_level_tv />
+        <arrow_tv />
+        <rent_count_tv />
+        <balance_tv />
+        <integral_tv />
+        <iv01 />
+        <iv02 />
+        <iv03 />
+        <iv04 />
+        <arrow_iv02 />
+        <activity_tips_tv />
+        <iv06 />
+        <arrow_iv01 />
+        <help_tips_tv />
+        <iv07 />
+        <iv08 />
+        <iv21 />
+        <iv10 />
+    </_content>
+</screen>

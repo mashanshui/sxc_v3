@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sxcapp.www.CustomerView.CollapsedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="分时租基本费用：0.50元/每分钟，1.00元/公里，此规则仅适用于大众POLO，不含优惠活动价格"
+        app:collapsedLines="1"
+        app:expandedText="展开全文"
+        app:collapsedText="收起全文"
+        app:tipsColor="#FF0000"
+        app:tipsUnderline="true"
+        app:tipsGravity="end"
+        app:tipsClickable="true"
+        android:textSize="14sp" />
+</RelativeLayout>

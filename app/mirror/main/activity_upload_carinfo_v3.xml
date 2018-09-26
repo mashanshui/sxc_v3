@@ -1,0 +1,40 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171796 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_upload_carinfo_v3">
+        <!-- ImageView Examples:
+        <iv01 src="@drawable/image_resource" />
+        <iv01 src="relative_path/image.jpg" /> -->
+        <iv01 />
+        <!-- TextView Examples:
+        <tv01 text="@string/string_resource" />
+        <tv01 text="Text literal" textSize="14sp" /> -->
+        <tv01 />
+        <driverseat_image_iv />
+        <take_photo_iv01 />
+        <behind_image_iv />
+        <take_photo_iv02 />
+        <left_image_iv />
+        <take_photo_iv03 />
+        <right_image_iv />
+        <take_photo_iv04 />
+        <iv02 />
+        <tv02 />
+        <tv10 />
+        <luxury_remind_tv />
+        <add_pic01 />
+        <cancel_iv01 />
+        <add_pic02 />
+        <cancel_iv02 />
+        <add_pic03 />
+        <cancel_iv03 />
+        <add_pic04 />
+        <cancel_iv04 />
+        <add_pic05 />
+        <cancel_iv05 />
+    </_content>
+</screen>

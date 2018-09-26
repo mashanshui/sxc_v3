@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/remark_checkbox_checked"  android:state_selected="true" />
+    <item android:drawable="@drawable/remark_checkbox_uncheck_v3" android:state_selected="false" />
+
+
+</selector>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/back" />
+
+        <ImageView
+            android:id="@+id/user_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@+id/back_iv"
+            android:src="@mipmap/user_white" />
+
+        <RelativeLayout
+            android:id="@+id/search_re"
+            android:layout_width="187dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/user_iv"
+            android:background="@mipmap/search_box">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:src="@mipmap/search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="搜索"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/message_iv"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/message" />
+
+    </RelativeLayout>
+
+    <com.sxcapp.www.CustomerView.filter.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sxcapp.www.CustomerView.XListView.XListView
+            android:id="@id/mFilterContentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"></com.sxcapp.www.CustomerView.XListView.XListView>
+
+    </com.sxcapp.www.CustomerView.filter.DropDownMenu>
+
+
+</LinearLayout>

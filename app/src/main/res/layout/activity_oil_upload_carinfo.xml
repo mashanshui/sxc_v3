@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/nomorl_top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="用车后,为避免车辆纠纷情况,请拍摄并上传照片(拍照请参考示例图)"
+            android:textColor="#272636"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="36dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/driverseat_image_iv"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/oilmeter_back"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/car_image_transparent"
+                android:gravity="center"
+                android:text="熄火前油表"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/behind_image_iv"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/car_behind_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/car_image_transparent"
+                android:gravity="center"
+                android:text="熄火后车身后外侧"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="36dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/left_image_iv"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/car_left_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/car_image_transparent"
+                android:gravity="center"
+                android:text="熄火后45度角车身左前侧"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/right_image_iv"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/car_right_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/car_image_transparent"
+                android:gravity="center"
+                android:text="熄火后45度角车身右前侧"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rect_or"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+</LinearLayout>

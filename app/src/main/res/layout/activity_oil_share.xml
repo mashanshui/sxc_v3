@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/nomorl_top_bar" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar" />
+
+    <ImageView
+        android:id="@+id/lopoi_iv"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="98dp"
+        android:layout_marginRight="12dp"
+        android:background="@mipmap/lopoi_pic" />
+
+    <LinearLayout
+        android:layout_width="34dp"
+        android:layout_height="73dp"
+        android:layout_above="@+id/lopoi_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/rect_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/zoom_in_re"
+            android:layout_width="match_parent"
+            android:layout_height="34dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/map_zoom_in" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/lightGray" />
+
+        <RelativeLayout
+            android:id="@+id/zoom_out_re"
+            android:layout_width="match_parent"
+            android:layout_height="34dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/map_zoom_out" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/service_iv"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="98dp"
+        android:layout_marginLeft="12dp"
+        android:background="@mipmap/service_center" />
+
+
+</RelativeLayout>

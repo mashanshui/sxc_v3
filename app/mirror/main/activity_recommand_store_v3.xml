@@ -1,0 +1,28 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171970 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_recommand_store_v3">
+        <!-- TextView Examples:
+        <tv01 text="@string/string_resource" />
+        <tv01 text="Text literal" textSize="14sp" /> -->
+        <tv01 />
+        <tv02 />
+        <!-- ImageView Examples:
+        <arrow_iv01 src="@drawable/image_resource" />
+        <arrow_iv01 src="relative_path/image.jpg" /> -->
+        <arrow_iv01 />
+        <address_tv />
+        <tv03 />
+        <count_tv />
+        <take_photo_iv01 />
+        <delete_iv01 />
+        <take_photo_iv02 />
+        <delete_iv02 />
+        <take_photo_iv03 />
+        <delete_iv03 />
+    </_content>
+</screen>

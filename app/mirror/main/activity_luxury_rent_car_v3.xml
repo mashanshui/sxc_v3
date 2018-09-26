@@ -1,0 +1,39 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171699 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <actionbar showTabsFor="@id/car_vp"/>
+    <_content layout="@layout/activity_luxury_rent_car_v3">
+        <car_vp>
+            <!-- Add pages to your ViewPager here like so:
+            <_page title="page title" icon="@drawable/my_icon"/>
+            <_page layout="@layout/my_page_layout">
+                <my_image_view src="@drawable/my_image"/>
+            </_page>
+            -->
+        </car_vp>
+        <!-- TextView Examples:
+        <car_name_tv text="@string/string_resource" />
+        <car_name_tv text="Text literal" textSize="14sp" /> -->
+        <car_name_tv />
+        <license_num_tv />
+        <!-- ImageView Examples:
+        <fetch_iv src="@drawable/image_resource" />
+        <fetch_iv src="relative_path/image.jpg" /> -->
+        <fetch_iv />
+        <fetch_store_name_tv />
+        <g_iv />
+        <g_store_name_tv />
+        <iv01 />
+        <rent_day_type_tv />
+        <rent_day_cost_tv />
+        <no_deductible_tv />
+        <check_iv />
+        <coupon_icon_iv />
+        <arrow_iv />
+        <coupon_tv />
+    </_content>
+</screen>

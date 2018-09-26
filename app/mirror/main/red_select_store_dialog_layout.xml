@@ -1,0 +1,23 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171639 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/red_select_store_dialog_layout">
+        <!-- ImageView Examples:
+        <fetch_iv src="@drawable/image_resource" />
+        <fetch_iv src="relative_path/image.jpg" /> -->
+        <fetch_iv />
+        <!-- TextView Examples:
+        <fetch_store_name_tv text="@string/string_resource" />
+        <fetch_store_name_tv text="Text literal" textSize="14sp" /> -->
+        <fetch_store_name_tv />
+        <fetch_store_detail_tv />
+        <g_iv />
+        <g_store_name_tv />
+        <same_store_tv />
+        <check_iv />
+    </_content>
+</screen>

@@ -1,0 +1,22 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171596 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/oldcarlist_item">
+        <!-- ImageView Examples:
+        <car_iv src="@drawable/image_resource" />
+        <car_iv src="relative_path/image.jpg" /> -->
+        <car_iv />
+        <!-- TextView Examples:
+        <car_name text="@string/string_resource" />
+        <car_name text="Text literal" textSize="14sp" /> -->
+        <car_name />
+        <car_info />
+        <tv01 />
+        <car_price />
+        <old_price_tv />
+    </_content>
+</screen>

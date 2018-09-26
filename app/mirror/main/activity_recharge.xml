@@ -1,0 +1,17 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171553 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_recharge">
+        <!-- ImageView Examples:
+        <iv01 src="@drawable/image_resource" />
+        <iv01 src="relative_path/image.jpg" /> -->
+        <iv01 />
+        <ali_check_iv />
+        <iv02 />
+        <wx_check_iv />
+    </_content>
+</screen>

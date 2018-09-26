@@ -1,0 +1,23 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171611 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/elec_short_item_v3">
+        <!-- ImageView Examples:
+        <car_iv src="@drawable/image_resource" />
+        <car_iv src="relative_path/image.jpg" /> -->
+        <car_iv />
+        <!-- TextView Examples:
+        <license_num_tv text="@string/string_resource" />
+        <license_num_tv text="Text literal" textSize="14sp" /> -->
+        <license_num_tv />
+        <car_color_iv />
+        <car_name_tv />
+        <endurance_tv />
+        <car_info_tv />
+        <battery_tv />
+    </_content>
+</screen>

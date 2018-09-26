@@ -1,0 +1,23 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171846 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_confirmorder">
+        <!-- TextView Examples:
+        <total_cost_tv text="@string/string_resource" />
+        <total_cost_tv text="Text literal" textSize="14sp" /> -->
+        <total_cost_tv />
+        <!-- ImageView Examples:
+        <iv01 src="@drawable/image_resource" />
+        <iv01 src="relative_path/image.jpg" /> -->
+        <iv01 />
+        <ali_check_iv />
+        <iv02 />
+        <wx_check_iv />
+        <iv03 />
+        <balance_check_iv />
+    </_content>
+</screen>

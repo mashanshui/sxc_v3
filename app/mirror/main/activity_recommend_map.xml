@@ -1,0 +1,45 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171587 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_recommend_map">
+        <!-- TextView Examples:
+        <address_tv text="@string/string_resource" />
+        <address_tv text="Text literal" textSize="14sp" /> -->
+        <address_tv />
+        <!-- ImageView Examples:
+        <iv01 src="@drawable/image_resource" />
+        <iv01 src="relative_path/image.jpg" /> -->
+        <iv01 />
+        <delete_iv />
+        <cancel_tv />
+        <address_lv>
+            <items layout="@android:layout/simple_list_item_1" >
+                <_item>
+                    <text1>Dalmatian</text1>
+                </_item>
+                <_item>
+                    <text1>Great Dane</text1>
+                </_item>
+                <_item>
+                    <text1>Shi Tzu</text1>
+                </_item>
+                <_item>
+                    <text1>Corgi</text1>
+                </_item>
+                <_item>
+                    <text1>Labrador</text1>
+                </_item>
+                <_item>
+                    <text1>Doberman</text1>
+                </_item>
+                <_item>
+                    <text1>Chihuahua</text1>
+                </_item>
+            </items>
+                </address_lv>
+    </_content>
+</screen>

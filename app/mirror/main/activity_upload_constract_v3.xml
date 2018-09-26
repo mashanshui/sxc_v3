@@ -1,0 +1,33 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171704 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_upload_constract_v3">
+        <!-- TextView Examples:
+        <constract_num_tv text="@string/string_resource" />
+        <constract_num_tv text="Text literal" textSize="14sp" /> -->
+        <constract_num_tv />
+        <!-- ImageView Examples:
+        <add_pic01 src="@drawable/image_resource" />
+        <add_pic01 src="relative_path/image.jpg" /> -->
+        <add_pic01 />
+        <cancel_iv01 />
+        <add_pic02 />
+        <cancel_iv02 />
+        <add_pic03 />
+        <cancel_iv03 />
+        <add_pic04 />
+        <cancel_iv04 />
+        <add_pic05 />
+        <cancel_iv05 />
+        <add_pic06 />
+        <cancel_iv06 />
+        <add_pic07 />
+        <cancel_iv07 />
+        <add_pic08 />
+        <cancel_iv08 />
+    </_content>
+</screen>

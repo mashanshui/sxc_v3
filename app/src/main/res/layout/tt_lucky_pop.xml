@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/lucky_result_frame">
+
+        <ImageView
+            android:id="@+id/advertising_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/lucky_result_frame" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/result_iv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/advertising_iv"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="70dp"-->
+        <!--android:background="@mipmap/full_minus_eight" />-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/advertising_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/tt_red_back" />
+
+            <TextView
+                android:id="@+id/result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#802520"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/adv_cancel_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/advertising_iv"
+            android:layout_alignRight="@+id/advertising_iv"
+            android:layout_alignTop="@+id/advertising_iv"
+            android:layout_marginEnd="31dp"
+            android:layout_marginRight="31dp"
+            android:layout_marginTop="47dp"
+            android:background="@mipmap/adver_cancel_back" />
+    </RelativeLayout>
+
+</RelativeLayout>

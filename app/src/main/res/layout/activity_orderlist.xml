@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/red_top_bar" />
+
+    <com.sxcapp.www.CustomerView.XListView.XListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:divider="@null"></com.sxcapp.www.CustomerView.XListView.XListView>
+
+    <LinearLayout
+        android:id="@+id/empty_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/empty_iv"
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:background="@mipmap/no_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="23dp"
+            android:text="暂无订单"
+            android:textColor="#272636"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

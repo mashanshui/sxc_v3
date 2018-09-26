@@ -1,0 +1,16 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603172145 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/umeng_socialize_oauth_dialog">
+        <!-- TextView Examples:
+        <umeng_title text="@string/string_resource" />
+        <umeng_title text="Text literal" textSize="14sp" /> -->
+        <umeng_title />
+        <umeng_share_btn />
+        <webView url="http://www.google.com" />
+    </_content>
+</screen>

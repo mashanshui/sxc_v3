@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/red_top_bar" />
+
+    <ImageView
+        android:id="@+id/iv01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:background="@mipmap/balance_icon_v3" />
+
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="可用余额(元)"
+        android:textColor="@color/black_tv_87"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/balance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/black_tv_87"
+        android:textSize="37sp" />
+
+    <Button
+        android:id="@+id/recharge_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/balance_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/selector_btn_click_bg_recharge"
+        android:gravity="center"
+        android:text="充值"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/withdraw_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/recharge_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/selector_btn_click_bg_white_to_gray"
+        android:gravity="center"
+        android:text="提现"
+        android:textColor="@color/black_tv_87"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/remind_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/withdraw_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>

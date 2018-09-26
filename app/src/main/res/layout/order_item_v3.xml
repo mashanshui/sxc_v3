@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/car_iv"
+        android:layout_width="116dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/car_iv"
+        android:textColor="@color/black_tv_87"
+        android:textSize="13sp"
+        android:text="订单号:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/order_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/tv01"
+        android:textColor="@color/black_tv_87"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/order_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:layout_alignBaseline="@+id/order_no_tv"
+        android:textColor="@color/black_tv_26"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv01"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/car_iv"
+        android:textColor="@color/black_tv_52"
+        android:text="下单时间:"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/order_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv01"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/tv02"
+        android:textColor="@color/black_tv_52"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/car_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv02"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/car_iv"
+        android:textColor="@color/black_tv_52"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/car_info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv02"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/car_name_tv"
+        android:textColor="@color/black_tv_52"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/car_info_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/rect_orange"
+        android:gravity="center"
+      android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/orange"
+        android:textSize="11sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/car_info_tv"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightGray2" />
+
+
+</RelativeLayout>

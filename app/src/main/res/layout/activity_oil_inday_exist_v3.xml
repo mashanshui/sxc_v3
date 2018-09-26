@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/red_top_bar" />
+
+    <com.sxcapp.www.CustomerView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/car_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/license_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/car_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rect_black_green"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black_tv_87"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/license_num_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp">
+
+                    <RelativeLayout
+                        android:id="@+id/re01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/car_color_iv"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:id="@+id/car_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/car_color_iv"
+                            android:textColor="@color/black_tv_87"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/car_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/re01"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/re01"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/car_info_tv">
+
+
+                        <TextView
+                            android:id="@+id/oil_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="油量:"
+                            android:textColor="@color/black_tv_87"
+                            android:textSize="10sp" />
+
+
+                        <TextView
+                            android:id="@+id/oil_mass_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/oil_tv"
+                            android:textColor="@color/black_tv_87"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_white"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/fetch_store_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_view_click_white_gray">
+
+                    <ImageView
+                        android:id="@+id/fetch_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:background="@mipmap/fetch_icon_dia_v3" />
+
+                    <TextView
+                        android:id="@+id/fetch_store_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/fetch_iv"
+                        android:lines="1"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightGray2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/select_g_store_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_view_click_white_gray">
+
+                    <ImageView
+                        android:id="@+id/g_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:background="@mipmap/g_icon_dia_v3" />
+
+                    <TextView
+                        android:id="@+id/g_store_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/g_iv"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rules_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f9f9f9"
+                    android:orientation="vertical"></LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="#f9f9f9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/rect_white"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rent_day_type_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:elevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/rent_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:background="@mipmap/rent_icon_v3" />
+
+                    <TextView
+                        android:id="@+id/rent_day_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/rent_iv"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/rent_day_cost_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/rent_day_type_tv"
+                    android:layout_marginLeft="48dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_tv_52"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:id="@+id/coupon_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:elevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/coupon_icon_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/coupon_icon_v3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/coupon_icon_iv"
+                        android:text="优惠券"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/coupon_size_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:textColor="@color/black_tv_87"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_deductible_re"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/selector_view_click_white_gray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="不计免赔"
+                    android:textColor="@color/black_tv_87"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/no_deductible_cost_tv"
+                    android:text="￥"
+                    android:textColor="@color/top_bar_red"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/no_deductible_cost_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/check_iv"
+                    android:textColor="@color/top_bar_red"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/check_iv"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/red_checkbox_checked_v3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/appoint_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selector_btn_click_bg_red"
+                android:gravity="center"
+                android:text="拍照开锁"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+    </com.sxcapp.www.CustomerView.BounceScrollView>
+
+</LinearLayout>

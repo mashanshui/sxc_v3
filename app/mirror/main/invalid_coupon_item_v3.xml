@@ -1,0 +1,22 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603172018 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/invalid_coupon_item_v3">
+        <!-- TextView Examples:
+        <coupon_cut_tv text="@string/string_resource" />
+        <coupon_cut_tv text="Text literal" textSize="14sp" /> -->
+        <coupon_cut_tv />
+        <coupon_type_tv />
+        <coupon_title_tv />
+        <coupon_termtime_tv />
+        <!-- ImageView Examples:
+        <status_iv src="@drawable/image_resource" />
+        <status_iv src="relative_path/image.jpg" /> -->
+        <status_iv />
+        <coupon_type_remark_tv />
+    </_content>
+</screen>

@@ -1,0 +1,39 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171840 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_lease">
+        <!-- ImageView Examples:
+        <back_iv src="@drawable/image_resource" />
+        <back_iv src="relative_path/image.jpg" /> -->
+        <back_iv />
+        <user_iv />
+        <message_iv />
+        <fetch_iv />
+        <!-- TextView Examples:
+        <city_name_tv text="@string/string_resource" />
+        <city_name_tv text="Text literal" textSize="14sp" /> -->
+        <city_name_tv />
+        <store_name_tv />
+        <give_back_iv />
+        <g_city_name_tv />
+        <g_store_name_tv />
+        <date_tv />
+        <day_tv />
+        <time_tv />
+        <lease_day_tv />
+        <arrow_iv />
+        <g_date_tv />
+        <g_day_tv />
+        <g_time_tv />
+        <recommend_iv01 />
+        <recommend_iv02 />
+        <recommend_tv01 />
+        <price_tv />
+        <recommend_tv02 />
+        <price_tv02 />
+    </_content>
+</screen>

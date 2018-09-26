@@ -1,0 +1,34 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171569 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_event_guide_v3">
+        <!-- ImageView Examples:
+        <iv01 src="@drawable/image_resource" />
+        <iv01 src="relative_path/image.jpg" /> -->
+        <iv01 />
+        <arrow_iv01 />
+        <!-- TextView Examples:
+        <elec_short_event_count_tv text="@string/string_resource" />
+        <elec_short_event_count_tv text="Text literal" textSize="14sp" /> -->
+        <elec_short_event_count_tv />
+        <iv02 />
+        <arrow_iv02 />
+        <elec_inday_event_count_tv />
+        <iv03 />
+        <arrow_iv03 />
+        <oil_short_event_count_tv />
+        <iv04 />
+        <arrow_iv04 />
+        <oil_inday_event_count_tv />
+        <iv05 />
+        <arrow_iv05 />
+        <luxury_event_count_tv />
+        <iv06 />
+        <activity_tittle_tv />
+        <arrow_iv06 />
+    </_content>
+</screen>

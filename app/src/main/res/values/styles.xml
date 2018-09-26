@@ -1,0 +1,126 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--设置沉浸式状态栏颜色-->
+        <item name="colorPrimaryDark">@color/lightWhite</item>
+        <!--设置各控制元件(如：EditText光标、check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色-->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--设置输入框不被软键盘遮挡-->
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <!--锁定屏幕为竖屏-->
+        <item name="android:screenOrientation">portrait</item>
+        <!--<item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent-->
+        <!--</item>-->
+        <!--<item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
+        <!--设置窗口背景为透明，用于右滑finish-->
+        <!--<item name="android:windowBackground">@color/white</item>-->
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <style name="RedAppTheme" parent="AppTheme">
+        <!--设置沉浸式状态栏颜色-->
+        <item name="colorPrimaryDark">@color/top_bar_red</item>
+        <!--设置各控制元件(如：EditText光标、check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色-->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--设置输入框不被软键盘遮挡-->
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <!--锁定屏幕为竖屏-->
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!--设置窗口背景为透明，用于右滑finish-->
+        <!--<item name="android:windowBackground">@color/white</item>-->
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <style name="touch_policy" parent="AppTheme">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="timepopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/timepicker_anim_enter_bottom
+        </item> <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/timepicker_anim_exit_bottom
+        </item> <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="MyCustomTabTextAppearance">
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+
+    <!--loading动画style-->
+    <style name="TransDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+    </style>
+
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--全宽-->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+    </style>
+
+    <style name="NoTransDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@color/white</item><!--背景透明-->
+        <!-- Dialog进入及退出动画 -->
+    </style>
+
+
+    <!--放大缩小动画-->
+    <style name="dialog_anim_style">
+        <item name="android:windowEnterAnimation">@anim/dialogin</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/dialogout</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="ProgressBar_Home" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_home</item>
+    </style>
+</resources>

@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sxcapp.www"
+    android:versionCode="34"
+    android:versionName="3.0.6">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="fd1d67c0e443b104c855228f3df7fd47" />
+        <!-- 配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="8ea3e4ea1b" />
+
+        <!-- 配置Bugly调试模式（true或者false）-->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="false" />
+
+        <activity android:name="com.sxcapp.www.activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.sxcapp.www.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="598ab026cae7e72fe6000485"></meta-data>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <!--<service-->
+        <!--android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"-->
+
+        <!--android:enabled="false"-->
+
+        <!--android:process=":leakcanary"-->
+        <!--/>-->
+
+        <!--<service-->
+
+        <!--android:name="com.squareup.leakcanary.DisplayLeakService"-->
+
+        <!--android:enabled="false"-->
+        <!--/>-->
+
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <!--<provider-->
+        <!--android:authorities="您应用的包名.DataProvider"-->
+        <!--android:name="cn.jpush.android.service.DataProvider"-->
+        <!--android:exported="true"-->
+        <!--/>-->
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name=".BroadCastReceiver.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106100585" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".Lease.LeaseActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.HelpCenterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.GuideActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.SelectCityActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.SelectStoreActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Buy.BuyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login.ForgetPWActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.ChooseCarActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Buy.OldCarListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Buy.OldCarDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Sell.SellActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Sell.SellFlowActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.OrderInfoActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.ConfirmOrderActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserCenter.OrderListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.PayDepositActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.MyOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserCenter.BalanceActivity_V3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.ShareDepositRechargeActivity_V3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.MyCouponActivity_V3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.ShareDepositActivity_V3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.MyWalletActivity_v3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.AutonymActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.UserProfilActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.ProfileModifyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.MyOrderGuideActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.WithDrawActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.BookCarActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.SetActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.InviteActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.MessageCenterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.UploadCreditReportActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.CreditAuthenticationActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.UploadCreditCardActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.OrderRemarkActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Buy.SearchListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Lease.LeaseSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.MapNavigationActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.UploadCarInfoActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilInDayShareActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilInDayRentActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricInDayShare.ElecExistInDayOrderActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilExistInDayOrderActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilInDayEndActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShortShare.PayActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.ElectricInDayShare.ElectricInDayShareActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricInDayShare.ElecInDayRentActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricInDayShare.ElecInDayEndActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.LeaseDepositActivity_V3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricInDayShare.ElecInDayOrderListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilInDayOrderListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShortShare.ElecShortOffOrderDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricInDayShare.ElecInDayOffOrderDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryOffOrderDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilShortShare.OilShortOffOrderDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilInDayShare.OilInDayOffOrderDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilShortShare.OilShortOrderListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryOrderListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShortShare.ElecShortOrderListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShortShare.BeginUseCarActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.OilShortShare.OilShareAppointActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.OilShortShare.OilBeginUseCarActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilShortShare.OilPayActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilShortShare.OilShortShareActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OilShortShare.UploadOilMassImageActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".Share.ProblemFeedbackActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserCenter.LotteryActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.LuxuryOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.OrderCouponListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserCenter.LuckyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".UserCenter.LuckyChooseStoreActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.LuckyActivityChifeng"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.EventListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryConfirmDayTypeActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryAppointActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryPreAuditActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryEndActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryRentCarActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Share.LuxuryShare.UploadBondsManActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.UploadIDCardActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.UploadConstractActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.StoreDetailActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.SelectGStoreActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShareActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryShareActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.LuxuryShare.LuxuryCarListActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ShareActivity.TTLuckyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ElectricShortShare.ShortShareAppointActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.ShareActivity.SelectLottoTypeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserCenter.EventList.EventGuideActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.RecommendStoreActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.EventList.SnapShotActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.EventList.EventListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.EventList.UploadSnapShotActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.RepairActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserCenter.RecommendStoreMapActivityV3"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/touch_policy"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Share.Navi.RouteNaviActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Share.Navi.NaviMainActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name=".wxapi.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!--用于访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于写入缓存数据到扩展存储卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!--分享需要权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--推送需要权限-->
+    <!-- Required -->
+    <uses-permission android:name="com.sxcapp.www.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+</manifest>

@@ -1,0 +1,27 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171938 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_autonym">
+        <!-- TextView Examples:
+        <tv01 text="@string/string_resource" />
+        <tv01 text="Text literal" textSize="14sp" /> -->
+        <tv01 />
+        <!-- ImageView Examples:
+        <idcard_front_iv src="@drawable/image_resource" />
+        <idcard_front_iv src="relative_path/image.jpg" /> -->
+        <idcard_front_iv />
+        <iv01 />
+        <drive_card_front_iv />
+        <iv02 />
+        <drive_card_appendix_front_iv />
+        <iv03 />
+        <hand_idcard_iv />
+        <iv04 />
+        <authentication_iv />
+        <authentication_tv />
+    </_content>
+</screen>

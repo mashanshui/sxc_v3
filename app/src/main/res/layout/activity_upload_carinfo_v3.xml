@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/red_top_bar" />
+
+    <com.sxcapp.www.CustomerView.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#f5f5f5">
+
+
+                <ImageView
+                    android:id="@+id/iv01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/camer_icon_v3" />
+
+                <TextView
+                    android:id="@+id/tv01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/iv01"
+                    android:text="用车后，为避免车辆纠纷状况，请拍摄并上传照片" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv01"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv01"
+                    android:text="(拍照请参照示例图片)" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/re01"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/driverseat_image_iv"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:background="@mipmap/car_driveseat_image"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/take_photo_iv01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/take_photo_icon_v3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/car_image_transparent"
+                        android:gravity="center"
+                        android:text="车内前排"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/re01">
+
+                    <ImageView
+                        android:id="@+id/behind_image_iv"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:background="@mipmap/car_behind_image"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/take_photo_iv02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/take_photo_icon_v3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/car_image_transparent"
+                        android:gravity="center"
+                        android:text="车身后外侧"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/re02"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/left_image_iv"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:background="@mipmap/car_left_image"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/take_photo_iv03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/take_photo_icon_v3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/car_image_transparent"
+                        android:gravity="center"
+                        android:text="45度角车身左前侧"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/re02">
+
+
+                    <ImageView
+                        android:id="@+id/right_image_iv"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:background="@mipmap/car_right_image"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/take_photo_iv04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/take_photo_icon_v3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/car_image_transparent"
+                        android:gravity="center"
+                        android:text="45度角车身右前侧"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#f5f5f5">
+
+
+                <ImageView
+                    android:id="@+id/iv02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/camer_icon_v3" />
+
+                <TextView
+                    android:id="@+id/tv02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/iv02"
+                    android:text="车辆损坏部位拍照"
+                    android:textColor="@color/black_tv_87" />
+
+                <TextView
+                    android:id="@+id/tv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv02"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv02"
+                    android:text="补充固定角度无法拍照的受损图片(轮胎、内顶等)" />
+
+                <TextView
+                    android:id="@+id/luxury_remind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv10"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv02"
+                    android:text="豪车租时,第一张图上传验车单"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_re01"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic01"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re02"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re01">
+
+                    <ImageView
+                        android:id="@+id/add_pic02"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv02"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_pic_re"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/add_re03"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp">
+
+                    <ImageView
+                        android:id="@+id/add_pic03"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv03"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_re04"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/add_re03">
+
+                    <ImageView
+                        android:id="@+id/add_pic04"
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_pic_v3"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/cancel_iv04"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/delete_conten_icon_v3"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_re05"
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/add_pic05"
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/add_pic_v3" />
+
+                <ImageView
+                    android:id="@+id/cancel_iv05"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/delete_conten_icon_v3"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/commit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rect_green"
+                android:text="提交照片"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+    </com.sxcapp.www.CustomerView.BounceScrollView>
+</LinearLayout>
+

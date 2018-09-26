@@ -1,0 +1,25 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603171688 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/share_deposit_recharge">
+        <!-- TextView Examples:
+        <account_tv text="@string/string_resource" />
+        <account_tv text="Text literal" textSize="14sp" /> -->
+        <account_tv />
+        <all_deposit_tv />
+        <tv01 />
+        <need_recharge_tv />
+        <!-- ImageView Examples:
+        <check_iv src="@drawable/image_resource" />
+        <check_iv src="relative_path/image.jpg" /> -->
+        <check_iv />
+        <iv01 />
+        <ali_check_iv />
+        <iv02 />
+        <wx_check_iv />
+    </_content>
+</screen>

@@ -1,0 +1,28 @@
+<!-- [ Mirror metadata ] generatedAt: 1530603172089 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/activity_luxury_book">
+        <!-- TextView Examples:
+        <tv_lo01 text="@string/string_resource" />
+        <tv_lo01 text="Text literal" textSize="14sp" /> -->
+        <tv_lo01 />
+        <lease_lo_tv />
+        <tv_lo02 />
+        <g_lo_tv />
+        <linc01 />
+        <license_num_tv />
+        <rules_title_tv />
+        <rule_remark_tv />
+        <expandable_text />
+        <deduction_tv01 />
+        <deduction_tv />
+        <!-- ImageView Examples:
+        <check_iv src="@drawable/image_resource" />
+        <check_iv src="relative_path/image.jpg" /> -->
+        <check_iv />
+    </_content>
+</screen>

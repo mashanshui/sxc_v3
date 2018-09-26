@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/car_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/license_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/car_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rect_black_green"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/black_tv_87"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/license_num_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp">
+
+        <RelativeLayout
+            android:id="@+id/re01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/car_color_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:background="@color/orRed" />
+
+            <TextView
+                android:id="@+id/car_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/car_color_iv"
+                android:textColor="@color/black_tv_87"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/endurance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_toRightOf="@+id/re01"
+            android:textColor="@color/black_tv_87"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/car_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/re01"
+            android:layout_below="@+id/re01"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/black_tv_87"
+            android:textSize="10sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/endurance_tv"
+            android:layout_below="@+id/endurance_tv"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/battery_re"
+                android:layout_width="40dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/battery_icon_v3">
+
+                <com.sxcapp.www.CustomerView.BatteryView
+                    android:id="@+id/battery_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="1dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/battery_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/battery_re"
+                android:textColor="@color/black_tv_87"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
